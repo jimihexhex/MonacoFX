@@ -67,6 +67,8 @@
 
 	require(['vs/editor/editor.main'], function() {
 
+        const url = window.location.search;
+
 		editorView = monaco.editor.create(document.getElementById('container'), {
 
 			//theme: 'mylangTheme',
@@ -84,14 +86,6 @@
 			scrollBeyondLastLine: false,
 
             scrollbar: {
-                // Subtle shadows to the left & top. Defaults to true.
-                useShadows: true,
-
-                // Render vertical arrows. Defaults to false.
-                verticalHasArrows: true,
-                // Render horizontal arrows. Defaults to false.
-                horizontalHasArrows: true,
-
                 // Render vertical scrollbar.
                 // Accepted values: 'auto', 'visible', 'hidden'.
                 // Defaults to 'auto'
@@ -100,14 +94,13 @@
                 // Accepted values: 'auto', 'visible', 'hidden'.
                 // Defaults to 'auto'
                 horizontal: 'auto',
+	        },
 
-                verticalScrollbarSize: 17,
-                horizontalScrollbarSize: 17,
-                arrowSize: 30,
+            minimap: {
+                enabled: false
+            },
 
-				alwaysConsumeMouseWheel: false
-	        }
-
+            lineNumbers: 'off'
         });
 
         // overrides the context menu 'copy'

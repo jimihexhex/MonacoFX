@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 ext.publishingInfo.artifactId =  project.name.toLowerCase()
 ext.publishingInfo.groupId    =  'eu.mihosoft.monacofx'
-ext.publishingInfo.versionId  =  '0.0.8'
+ext.publishingInfo.versionId  =  '0.0.9'
 
 ext.publishingInfo.developerName         = 'Michael Hoffer'
 ext.publishingInfo.developerAlias        = 'miho'
