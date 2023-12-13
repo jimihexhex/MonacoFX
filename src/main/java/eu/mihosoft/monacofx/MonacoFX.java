@@ -119,6 +119,11 @@ public class MonacoFX extends Region {
         layoutInArea(view,0,0,getWidth(), getHeight(),
                 0, HPos.CENTER, VPos.CENTER
         );
+        
+    }
+
+    @Override public void requestFocus() {
+        view.requestFocus();
     }
 
     public Editor getEditor() {
